@@ -1,6 +1,8 @@
 services:
   - type: web
-    name: argus
-    env: python
+    name: argus-web-app
+    runtime: python
+    plan: free
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
+    startCommand: python3 app.py
+    rootDir: web_app
